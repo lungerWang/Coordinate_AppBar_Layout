@@ -1,4 +1,4 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+//配置使用config.gradle统一控制gradle
 apply from: "config.gradle"
 buildscript {
     
@@ -8,10 +8,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.0.1'
-        
-
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+        classpath 'com.jakewharton:butterknife-gradle-plugin:8.4.0'
     }
 }
 
