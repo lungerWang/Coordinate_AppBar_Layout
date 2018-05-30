@@ -16,21 +16,23 @@ public class MainActivity extends BaseActivity {
     @BindView(R.id.list)
     RecyclerView vRecyclerView;
 
-    @BindView(R.id.toolbar)
-    Toolbar vToolbar;
+//    @BindView(R.id.toolbar)
+//    Toolbar vToolbar;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setSupportActionBar(vToolbar);
+//        vToolbar.setTitle("Hello AppBarLayout");
+//        setSupportActionBar(vToolbar);
         vRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         vRecyclerView.setAdapter(new MyAdapter());
     }
 
+
     @Override
     protected int getLayoutId() {
-        return R.layout.activity_main;
+        return R.layout.activity_main3;
     }
 
 
