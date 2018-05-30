@@ -11,13 +11,14 @@ import butterknife.Unbinder;
  * Created by Allen on 2018/5/25 0025.
  */
 
-public class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends AppCompatActivity {
 
     private Unbinder mBind;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(getLayoutId());
         mBind = ButterKnife.bind(this);
     }
 
@@ -27,4 +28,6 @@ public class BaseActivity extends AppCompatActivity {
         super.onDestroy();
         mBind.unbind();
     }
+
+    protected abstract int getLayoutId();
 }

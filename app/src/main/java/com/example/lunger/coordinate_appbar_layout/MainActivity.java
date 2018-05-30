@@ -1,34 +1,61 @@
 package com.example.lunger.coordinate_appbar_layout;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.Unbinder;
 
 public class MainActivity extends BaseActivity {
 
-    @BindView(android.R.id.list)
+    @BindView(R.id.list)
     RecyclerView vRecyclerView;
 
     @BindView(R.id.toolbar)
     Toolbar vToolbar;
-    private Unbinder mBind;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        mBind = ButterKnife.bind(this);
+
+        vRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        vRecyclerView.setAdapter(new MyAdapter());
     }
 
     @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        mBind.unbind();
+    protected int getLayoutId() {
+        return R.layout.activity_main;
+    }
+
+
+    class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyHolder>{
+
+        @Override
+        public MyAdapter.MyHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+            return new MyHolder(LayoutInflater.from(MainActivity.this).inflate(R.layout.item_recycle_view, null));
+        }
+
+        @Override
+        public void onBindViewHolder(MyAdapter.MyHolder holder, int position) {
+
+        }
+
+        @Override
+        public int getItemCount() {
+            return 50;
+        }
+
+       class MyHolder extends RecyclerView.ViewHolder{
+
+           public MyHolder(View itemView) {
+               super(itemView);
+           }
+       }
     }
 }
