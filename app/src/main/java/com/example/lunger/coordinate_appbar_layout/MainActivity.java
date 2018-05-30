@@ -23,7 +23,7 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        setSupportActionBar(vToolbar);
         vRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         vRecyclerView.setAdapter(new MyAdapter());
     }
