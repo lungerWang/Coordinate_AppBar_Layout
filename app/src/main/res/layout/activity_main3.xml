@@ -12,33 +12,33 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <!--<android.support.v7.widget.Toolbar-->
-                <!--android:id="@+id/toolbar"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--app:layout_scrollFlags="scroll|enterAlways" />-->
-
-            <LinearLayout
-                android:orientation="horizontal"
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                app:layout_scrollFlags="scroll|enterAlways"
-                android:layout_height="wrap_content">
-                <ImageView
-                    android:src="#ff0000"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="30dp"/>
-                <ImageView
-                    android:src="#00ff00"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="30dp"/>
-                <ImageView
-                    android:src="#0000ff"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="30dp"/>
-            </LinearLayout>
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|enterAlways" />
+
+            <!--<LinearLayout-->
+                <!--android:orientation="horizontal"-->
+                <!--android:layout_width="match_parent"-->
+                <!--app:layout_scrollFlags="scroll|enterAlways"-->
+                <!--android:layout_height="wrap_content">-->
+                <!--<ImageView-->
+                    <!--android:src="#ff0000"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_height="30dp"/>-->
+                <!--<ImageView-->
+                    <!--android:src="#00ff00"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_height="30dp"/>-->
+                <!--<ImageView-->
+                    <!--android:src="#0000ff"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_height="30dp"/>-->
+            <!--</LinearLayout>-->
 
         </android.support.design.widget.AppBarLayout>
 
